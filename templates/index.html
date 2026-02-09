@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algerian Forest Fire Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f4037;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #1f4037;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .note {
+            background: #e8f5f0;
+            padding: 15px;
+            border-left: 5px solid #1f4037;
+            margin-top: 20px;
+        }
+
+        .url-box {
+            background: #f0f0f0;
+            padding: 10px;
+            font-family: monospace;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #1f4037;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #16352d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔥 Algerian Forest Fire Prediction System</h1>
+
+        <p>
+            This project predicts the <strong>Fire Weather Index (FWI)</strong> using
+            meteorological data collected from regions in Algeria.  
+            The FWI is a numerical indicator of fire intensity — higher values indicate
+            higher forest fire risk.
+        </p>
+
+        <h2>📌 Model Description</h2>
+        <p>
+            The prediction system is built using a <strong>Ridge Regression</strong> model.
+            Input features are standardized using a <strong>StandardScaler</strong> before
+            being passed to the model.
+        </p>
+
+        <ul>
+            <li>Algorithm: Ridge Regression</li>
+            <li>Preprocessing: Feature Scaling (StandardScaler)</li>
+            <li>Output: Fire Weather Index (FWI)</li>
+        </ul>
+
+        <h2>🧪 Input Features</h2>
+        <ul>
+            <li>Temperature</li>
+            <li>Relative Humidity (RH)</li>
+            <li>Wind Speed (WS)</li>
+            <li>Rain</li>
+            <li>FFMC, DMC, ISI indices</li>
+            <li>Fire Class (0 / 1)</li>
+            <li>Region (0 / 1)</li>
+        </ul>
+
+        <h2>▶️ How to Use the Application</h2>
+        <div class="note">
+            <p>
+                To access the prediction form, manually add
+                <strong><code>/predictdata</code></strong>
+                to the base URL.
+            </p>
+
+            <p>Example:</p>
+            <div class="url-box">
+                http://127.0.0.1:5000/predictdata
+            </div>
+
+            <p>
+                Fill in the required values and click <strong>Predict</strong>
+                to get the Fire Weather Index.
+            </p>
+        </div>
+
+        <a href="/predictdata" class="btn">Go to Prediction Page</a>
+    </div>
+</body>
+</html>
